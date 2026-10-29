@@ -139,40 +139,5 @@
   render('original');
 })();
 
-/* ---------- Форма раннего доступа (без бэкенда) ---------- */
-(function initJoinForm() {
-  const form = document.getElementById('join-form');
-  if (!form) return;
-  const email = form.elements.email;
-  const error = document.getElementById('email-error');
-  const success = document.getElementById('join-success');
-
-  function validate() {
-    const value = email.value.trim();
-    let message = '';
-    if (!value) message = 'Введите адрес электронной почты.';
-    else if (!email.checkValidity() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) message = 'Проверьте адрес: например, you@example.com.';
-    error.textContent = message;
-    email.setAttribute('aria-invalid', String(Boolean(message)));
-    return !message;
-  }
-
-  email.addEventListener('input', () => {
-    if (email.getAttribute('aria-invalid') === 'true') validate();
-  });
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if (!validate()) {
-      email.focus();
-      return;
-    }
-    const game = form.elements.game.selectedOptions[0].textContent;
-    form.hidden = true;
-    success.textContent = `Спасибо! Приглашение придёт на ${email.value.trim()}. Начнём с билдов для ${game}.`;
-    success.hidden = false;
-    success.focus();
-  });
-})();
 
 document.getElementById('year').textContent = String(new Date().getFullYear());
