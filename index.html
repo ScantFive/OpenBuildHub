@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BuildHub — сообщество билдов для игр с форками</title>
+  <meta name="description" content="BuildHub — платформа для публикации билдов персонажей. Делитесь сборками, делайте форки чужих решений с сохранением авторства и следите за версиями под каждый патч.">
+  <meta name="theme-color" content="#12161c">
+  <meta property="og:title" content="BuildHub — билды, которые развиваются вместе с сообществом">
+  <meta property="og:description" content="Публикуйте сборки персонажей, форкайте чужие с сохранением авторства и следите за версиями под патчи.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#top" class="logo" aria-label="BuildHub — на главную">Build<span>Hub</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="#problem">Проблема</a></li>
+          <li><a href="#features">Возможности</a></li>
+          <li><a href="#fork">Как работает форк</a></li>
+          <li><a href="#interface">Интерфейс</a></li>
+          <li><a href="#faq">Вопросы</a></li>
+        </ul>
+        <a href="https://github.com/ScantFive/BuildHub" class="btn btn-primary btn-sm"><svg class="gh-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Сообщество билдов для игр</p>
+          <h1 id="hero-title">Собирай. Делись. <span class="accent-text">Форкай.</span></h1>
+          <p class="lead">
+            BuildHub — место, где игроки публикуют сборки персонажей и развивают их вместе.
+            Возьмите чужой билд, измените под себя и опубликуйте в том же треде —
+            автор оригинала останется указан навсегда.
+          </p>
+          <div class="hero-actions">
+            <a href="https://github.com/ScantFive/BuildHub" class="btn btn-primary btn-lg"><svg class="gh-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> Проект на GitHub</a>
+          </div>
+          <ul class="hero-stats" aria-label="Проект в цифрах">
+            <li><strong>4</strong><span>игры на старте</span></li>
+            <li><strong>∞</strong><span>версий одного билда</span></li>
+            <li><strong>0 ₽</strong><span>для игроков</span></li>
+          </ul>
+        </div>
+
+        <!-- Макет интерфейса: каталог -->
+        <figure class="hero-mockup">
+          <div class="browser" role="img" aria-label="Макет главной страницы BuildHub: каталог игр и популярные билды">
+            <div class="browser-bar" aria-hidden="true">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="browser-url">buildhub.gg</span>
+            </div>
+            <div class="browser-body" aria-hidden="true">
+              <div class="mock-games">
+                <div class="mock-game g-d4"><span>DIABLO IV</span></div>
+                <div class="mock-game g-poe"><span>PATH OF EXILE 2</span></div>
+                <div class="mock-game g-er"><span>ELDEN RING</span></div>
+                <div class="mock-game g-wow"><span>WORLD OF WARCRAFT</span></div>
+              </div>
+              <div class="mock-chips"><span class="active">Все</span><span>PvE</span><span>PvP</span><span>Прокачка</span></div>
+              <div class="mock-cards">
+                <div class="mock-card">
+                  <div class="mock-thumb t-fire">О</div>
+                  <div>
+                    <b>Огненный чародей</b>
+                    <small>Neroth · Diablo IV · Сезон 5</small>
+                    <div class="mock-stats"><span>★ 512</span><span>⑂ 128</span></div>
+                  </div>
+                </div>
+                <div class="mock-card">
+                  <div class="mock-thumb t-blood">К</div>
+                  <div>
+                    <b>Кровавый рыцарь</b>
+                    <small>Valkar · Diablo IV · Соло</small>
+                    <div class="mock-stats"><span>★ 428</span><span>⑂ 96</span></div>
+                  </div>
+                </div>
+                <div class="mock-card">
+                  <div class="mock-thumb t-storm">С</div>
+                  <div>
+                    <b>Следопыт молний</b>
+                    <small>Stormblade · PoE 2 · 0.2.0</small>
+                    <div class="mock-stats"><span>★ 386</span><span>⑂ 74</span></div>
+                  </div>
+                </div>
+                <div class="mock-card">
+                  <div class="mock-thumb t-light">П</div>
+                  <div>
+                    <b>Паладин света</b>
+                    <small>Lumen · Elden Ring · 1.14</small>
+                    <div class="mock-stats"><span>★ 301</span><span>⑂ 52</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figcaption class="visually-hidden">Пример интерфейса каталога BuildHub</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Проблема ===== -->
+    <section class="section" id="problem" aria-labelledby="problem-title">
+      <div class="wrap">
+        <p class="eyebrow">Проблема</p>
+        <h2 id="problem-title">Хорошие билды теряются, устаревают и копируются без автора</h2>
+        <p class="section-lead">
+          Сегодня сборки живут в видео, скриншотах, ветках Reddit и сообщениях в Discord.
+          Найти актуальную версию под текущий патч сложно, а доработать чужую — ещё сложнее.
+        </p>
+        <ul class="problem-grid">
+          <li class="card problem-card">
+            <span class="card-icon" aria-hidden="true"></span>
+            <h3>Разбросано по платформам</h3>
+            <p>Снаряжение — в таблице, навыки — на скриншоте, порядок прокачки — на 14-й минуте видео.</p>
+          </li>
+          <li class="card problem-card">
+            <span class="card-icon" aria-hidden="true"></span>
+            <h3>Устаревает с каждым патчем</h3>
+            <p>Билд под прошлый сезон выглядит так же, как свежий. Непонятно, что изменилось и когда.</p>
+          </li>
+          <li class="card problem-card">
+            <span class="card-icon" aria-hidden="true"></span>
+            <h3>Авторство теряется</h3>
+            <p>Билд копируют, слегка меняют и выкладывают заново. Автор оригинала остаётся без упоминания.</p>
+          </li>
+          <li class="card problem-card">
+            <span class="card-icon" aria-hidden="true"></span>
+            <h3>Вариации не связаны</h3>
+            <p>PvP-версия, вариант для прокачки, бюджетная сборка — всё это разные посты, которые не найти вместе.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Ценность ===== -->
+    <section class="section section-alt" aria-labelledby="value-title">
+      <div class="wrap value-grid">
+        <div>
+          <p class="eyebrow">Решение</p>
+          <h2 id="value-title">Один билд — одна страница, вся история и все вариации рядом</h2>
+          <p class="section-lead">
+            BuildHub работает как GitHub для игровых сборок: структурированные билды,
+            версии под патчи и форки, которые остаются в одном треде с оригиналом.
+          </p>
+        </div>
+        <ul class="value-list">
+          <li><span class="check" aria-hidden="true">✓</span><div><b>Для авторов</b> — признание: каждый форк ведёт к вам, а счётчик показывает, сколько людей развивают вашу идею.</div></li>
+          <li><span class="check" aria-hidden="true">✓</span><div><b>Для игроков</b> — актуальность: версия, патч и список изменений видны сразу.</div></li>
+          <li><span class="check" aria-hidden="true">✓</span><div><b>Для сообщества</b> — эволюция: лучшие решения не дублируются, а растут в дереве форков.</div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Возможности ===== -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <p class="eyebrow">Возможности</p>
+        <h2 id="features-title">Всё, что нужно для сборки персонажа</h2>
+        <ul class="feature-grid">
+          <li class="card feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><path d="M6 7v2a3 3 0 003 3h6a3 3 0 003-3V7M12 12v5"/></svg>
+            <h3>Форк с сохранением авторства</h3>
+            <p>Скопируйте любой билд, измените под себя и опубликуйте. Оригинал не меняется, а его автор указан в вашем форке.</p>
+          </li>
+          <li class="card feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>
+            <h3>История версий</h3>
+            <p>Каждое изменение — новая ревизия с заметкой «что изменилось». Старые версии всегда доступны.</p>
+          </li>
+          <li class="card feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg>
+            <h3>Структурированный билд</h3>
+            <p>Снаряжение, навыки, характеристики, порядок прокачки и стиль игры — в едином понятном формате.</p>
+          </li>
+          <li class="card feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16l-6 8v6l-4-2v-4z"/></svg>
+            <h3>Фильтры по игре и патчу</h3>
+            <p>Класс, назначение (PvE, PvP, прокачка) и версия патча — находите только актуальные сборки.</p>
+          </li>
+          <li class="card feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></svg>
+            <h3>Избранное</h3>
+            <p>Сохраняйте понравившиеся билды и следите за их новыми версиями и форками.</p>
+          </li>
+          <li class="card feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12h8M12 8v8"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg>
+            <h3>Сравнение с оригиналом</h3>
+            <p>На странице форка подсвечены разделы, которые автор изменил относительно исходного билда.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Интерактивная демонстрация форка ===== -->
+    <section class="section section-alt" id="fork" aria-labelledby="fork-title">
+      <div class="wrap">
+        <p class="eyebrow">Главная фича</p>
+        <h2 id="fork-title">Как работает форк</h2>
+        <ol class="steps">
+          <li><span class="step-num" aria-hidden="true">1</span><div><b>Найдите билд</b><p>Выберите сборку, которая почти подходит.</p></div></li>
+          <li><span class="step-num" aria-hidden="true">2</span><div><b>Нажмите «Форк»</b><p>Получите копию текущей версии в редакторе.</p></div></li>
+          <li><span class="step-num" aria-hidden="true">3</span><div><b>Измените под себя</b><p>Поменяйте навыки, снаряжение или назначение.</p></div></li>
+          <li><span class="step-num" aria-hidden="true">4</span><div><b>Опубликуйте в треде</b><p>Форк появится рядом с оригиналом и укажет его автора.</p></div></li>
+        </ol>
+
+        <div class="fork-demo">
+          <div class="card thread-panel">
+            <h3 id="thread-label">Тред форков</h3>
+            <p class="muted small">Выберите версию, чтобы увидеть, что в ней изменено.</p>
+            <div class="thread" role="group" aria-labelledby="thread-label">
+              <button type="button" class="thread-item" aria-pressed="true" data-build="original">
+                <span class="avatar" style="--c:#e74c3c" aria-hidden="true">N</span>
+                <span><b>Огненный чародей</b><small>Neroth · оригинал</small></span>
+              </button>
+              <div class="thread-children">
+                <button type="button" class="thread-item" aria-pressed="false" data-build="pvp">
+                  <span class="avatar" style="--c:#c9a227" aria-hidden="true">M</span>
+                  <span><b>Огненный чародей (PvP)</b><small>Mira · форк от Neroth</small></span>
+                </button>
+                <div class="thread-children">
+                  <button type="button" class="thread-item" aria-pressed="false" data-build="arena">
+                    <span class="avatar" style="--c:#2e9e8f" aria-hidden="true">Y</span>
+                    <span><b>PvP-чародей для арены 3×3</b><small>Вы · форк от Mira</small></span>
+                  </button>
+                </div>
+                <button type="button" class="thread-item" aria-pressed="false" data-build="leveling">
+                  <span class="avatar" style="--c:#9b59b6" aria-hidden="true">S</span>
+                  <span><b>Огненный чародей — быстрая прокачка</b><small>Stormblade · форк от Neroth</small></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <article class="card build-preview" aria-live="polite" aria-atomic="true">
+            <p class="lineage" id="demo-lineage" hidden></p>
+            <header class="build-preview-head">
+              <div class="mock-thumb t-fire big" aria-hidden="true">О</div>
+              <div>
+                <h3 id="demo-title">Огненный чародей</h3>
+                <p class="muted small" id="demo-meta">Neroth · v2 · Diablo IV · Сезон 5</p>
+                <p class="tags" id="demo-tags"></p>
+              </div>
+            </header>
+            <dl class="build-fields" id="demo-fields"></dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Интерфейс ===== -->
+    <section class="section" id="interface" aria-labelledby="interface-title">
+      <div class="wrap">
+        <p class="eyebrow">Интерфейс</p>
+        <h2 id="interface-title">Страница билда: всё на одном экране</h2>
+        <p class="section-lead">Ниже — макет страницы форка. Справа история версий и дерево форков, слева структурированное описание сборки.</p>
+
+        <figure class="browser browser-wide" role="img" aria-label="Макет страницы билда: плашка «Форк билда от Neroth», разделы снаряжения и навыков, история версий и тред форков">
+          <div class="browser-bar" aria-hidden="true">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="browser-url">buildhub.gg/builds/fire-sorc-pvp</span>
+          </div>
+          <div class="browser-body page-mock" aria-hidden="true">
+            <div class="pm-lineage">⑂ Форк билда <u>«Огненный чародей»</u> от <b>Neroth</b></div>
+            <div class="pm-head">
+              <div class="mock-thumb t-fire big">О</div>
+              <div>
+                <div class="pm-title">Огненный чародей (PvP)</div>
+                <div class="muted small">Mira · v1 · 5 дней назад</div>
+                <div class="pm-tags"><span>Diablo IV</span><span>Чародей</span><span>Сезон 5</span><span class="hl">PvP</span></div>
+              </div>
+              <div class="pm-actions"><span class="pm-btn">★ В избранное · 41</span><span class="pm-btn primary">⑂ Форк · 7</span></div>
+            </div>
+            <div class="pm-layout">
+              <div class="pm-main">
+                <div class="pm-panel"><b>Изменения относительно оригинала</b><div class="pm-tags"><span class="hl">Назначение</span><span class="hl">Навыки</span><span class="hl">Стиль игры</span></div></div>
+                <div class="pm-panel"><b>Снаряжение</b>
+                  <div class="pm-row"><span>Оружие</span><span>Посох Пылающего Ока</span></div>
+                  <div class="pm-row"><span>Шлем</span><span>Корона Лидии</span></div>
+                  <div class="pm-row"><span>Амулет</span><span>Амулет Пламени Сердца</span></div>
+                </div>
+                <div class="pm-panel changed"><b>Навыки</b>
+                  <div class="pm-skills"><span>1 Огненная стрела</span><span>2 Ледяная броня</span><span>3 Огненная стена</span><span>4 Телепорт</span><span>5 Ледяные оковы</span></div>
+                </div>
+              </div>
+              <div class="pm-side">
+                <div class="pm-panel"><b>История версий</b>
+                  <div class="pm-ver active">v1 · Форк под PvP</div>
+                </div>
+                <div class="pm-panel"><b>Тред форков</b>
+                  <div class="pm-tree">
+                    <div>● Огненный чародей <small>Neroth · оригинал</small></div>
+                    <div class="lvl current">● Огненный чародей (PvP) <small>Mira</small></div>
+                    <div class="lvl">● Быстрая прокачка <small>Stormblade</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Игры ===== -->
+    <section class="section section-alt" aria-labelledby="games-title">
+      <div class="wrap">
+        <p class="eyebrow">Игры на старте</p>
+        <h2 id="games-title">Начинаем с любимых RPG и MMO</h2>
+        <ul class="games">
+          <li class="game g-d4"><span class="game-logo">DIABLO IV</span><span class="game-name">Diablo IV</span></li>
+          <li class="game g-poe"><span class="game-logo">PATH OF EXILE 2</span><span class="game-name">Path of Exile 2</span></li>
+          <li class="game g-er"><span class="game-logo">ELDEN RING</span><span class="game-name">Elden Ring</span></li>
+          <li class="game g-wow"><span class="game-logo">WORLD OF WARCRAFT</span><span class="game-name">World of Warcraft</span></li>
+        </ul>
+        <p class="muted center">Справочники классов, патчей и назначений для каждой игры. Новые игры добавляются по голосованию сообщества.</p>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section cta" id="join" aria-labelledby="join-title">
+      <div class="wrap cta-inner">
+        <h2 id="join-title">BuildHub развивается открыто</h2>
+        <p class="section-lead">Исходный код проекта доступен на GitHub.</p>
+        <div class="cta-actions">
+          <a href="https://github.com/ScantFive/BuildHub" class="btn btn-primary btn-lg"><svg class="gh-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> Открыть репозиторий на GitHub</a>
+        </div>
+        <p class="hint">github.com/ScantFive/BuildHub</p>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-wrap">
+        <p class="eyebrow">Вопросы</p>
+        <h2 id="faq-title">Частые вопросы</h2>
+        <div class="faq">
+          <details>
+            <summary>Чем форк отличается от простого копирования?</summary>
+            <p>Форк навсегда связан с исходным билдом: на его странице указан автор оригинала, а сам форк появляется в треде рядом с оригиналом. Копия «в новый пост» такой связи не сохраняет.</p>
+          </details>
+          <details>
+            <summary>Может ли кто-то изменить мой билд?</summary>
+            <p>Нет. Редактировать билд может только его автор — каждая правка создаёт новую версию. Остальные могут сделать форк, ваш оригинал при этом не меняется.</p>
+          </details>
+          <details>
+            <summary>Что происходит, когда выходит новый патч?</summary>
+            <p>Автор выпускает новую версию с пометкой патча. Старые версии остаются в истории, а в каталоге видно, под какой патч собран билд.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a href="#top" class="logo" aria-label="BuildHub — наверх">Build<span>Hub</span></a>
+      <p class="muted small">© <span id="year">2026</span> BuildHub</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
