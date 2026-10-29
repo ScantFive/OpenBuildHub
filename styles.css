@@ -116,10 +116,11 @@ button, input, select { font: inherit; color: inherit; }
 .mock-game { aspect-ratio: 4 / 3; padding: 6px; }
 .mock-game span, .game-logo { font-family: Cinzel, Georgia, serif; font-weight: 700; letter-spacing: .1em; text-shadow: 0 2px 10px #000; position: relative; }
 .mock-game span { font-size: clamp(8px, .8vw, 12px); }
-.g-d4  { background: radial-gradient(circle at 50% 30%, #c0392b 0%, #5a0f0f 50%, #1a0505 100%); color: #f0dcc4; }
-.g-poe { background: radial-gradient(circle at 50% 35%, #8a6a3a 0%, #3b2a1d 50%, #120d0a 100%); color: #f3c97a; }
-.g-er  { background: radial-gradient(circle at 50% 25%, #e6b94d 0%, #3d5b3a 45%, #0d1712 100%); color: #f6e2a6; }
-.g-wow { background: linear-gradient(120deg, #2e7d32 0%, #1b3a4b 50%, #283593 100%); color: #ffd54f; }
+.g-d4, .g-poe, .g-er, .g-wow { background-size: cover; background-position: center; background-color: #1b2129; }
+.g-d4  { background-image: url("assets/games/diablo4.jpg"); }
+.g-poe { background-image: url("assets/games/poe2.jpg"); }
+.g-er  { background-image: url("assets/games/elden_ring.jpg"); }
+.g-wow { background-image: url("assets/games/wow.jpg"); }
 
 .mock-chips { display: flex; gap: 6px; margin: 14px 0 10px; font-size: 12px; }
 .mock-chips span { padding: 3px 12px; border-radius: 6px; border: 1px solid var(--border); background: var(--panel); }
